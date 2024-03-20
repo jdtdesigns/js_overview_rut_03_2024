@@ -1,63 +1,36 @@
-// const num = 10
 
-// num++
+const fruits = ['orange', 'apple', 'grape']
+const data = [10, 'one', ['John', 'Smith'], 57, null]
 
+console.log(fruits)
 
-// let data = 'one'
+// Adding Items to an Array
+fruits.push('kiwi')
 
-// if (data === 'resolved') {
-//   console.log('data was received!')
-// } else if (data === 'one') {
-//   console.log('one!')
-// } else {
-//   console.log('data was not received...')
-// }
+console.log(fruits)
 
-// let age = 8
+fruits.unshift('banana')
 
-// if (age >= 18) {
-//   console.log('You are now an adult')
-// } else if ('something' && age < 18) {
-//   console.log('You are a teenager')
-// } else {
-//   console.log('You are a youngster')
-// }
+console.log(fruits)
 
+fruits.splice(1, 0, 'strawberry', 'blueberry')
 
-// let val = 'some'
-// let num = 0
+console.log(fruits)
 
-// let result = val && num
-// let anotherResult = val || num
-// let comparison = num > 0
+// Removing Items from an Array
+fruits.pop()
 
-// console.log(comparison)
+console.log(fruits)
 
-// const num = 3
+fruits.shift()
 
-// switch (num) {
-//   case 10:
-//     console.log('yep, it is 10')
-//     console.log('something else for 10')
-//     break
-//   case 5:
-//     console.log('it is 5')
-//     break
-//   default:
-//     console.log('it is not one of the expected values')
-// }
+console.log(fruits)
 
+fruits.splice(2, 1)
 
+console.log(fruits)
 
-
-
-
-
-
-// for (var index = 0; index < 10; index++) {
-//   console.log(index)
-
-//   if (true) {
-//     var someVar = 'something'
-//   }
-// }
+// Iterating or Looping over an Array
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i])
+}
