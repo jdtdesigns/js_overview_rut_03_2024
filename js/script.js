@@ -1,42 +1,104 @@
 
-const fruits = ['orange', 'apple', 'grape']
-const data = [10, 'one', ['John', 'Smith'], 57, null]
 
-// Use the assignment operator to replace an item/element in an array
-fruits[1] = 'kiwi'
+function one() {
+  const sharedVar = 'shared'
+  console.log(sharedVar)
+}
 
-// Use splice to insert an item(s) at a certain index or to remove an item(s) at a certain index
-fruits.splice(1, 0, 'banana', 'strawberry')
+function two() {
+  console.log(sharedVar)
 
-console.log(fruits)
+  if (true) {
+    console.log('nested', sharedVar)
+  }
+}
 
-// // Adding Items to an Array
-// fruits.push('kiwi')
+function three() {
+  console.log(sharedVar)
+}
 
-// console.log(fruits)
 
-// fruits.unshift('banana')
+one()
+three()
 
-// console.log(fruits)
 
-// fruits.splice(1, 0, 'strawberry', 'blueberry')
 
-// console.log(fruits)
 
-// // Removing Items from an Array
-// fruits.pop()
 
-// console.log(fruits)
 
-// fruits.shift()
 
-// console.log(fruits)
 
-// fruits.splice(2, 1)
 
-// console.log(fruits)
 
-// // Iterating or Looping over an Array
-// for (let i = 0; i < fruits.length; i++) {
-//   console.log(fruits[i])
+
+
+
+
+
+
+
+
+
+
+
+// // function gatherNames(...names) {
+// //   // const names = [name1, name2, name3, name4]
+// //   console.log('spread names:', names)
+// //   return names
+// // }
+
+// // const studentNames = gatherNames('Trevor', 'William', 'Muhsin', 'Mirsad')
+
+// // console.log(studentNames)
+
+// // const businessNames = gatherNames('Office Depot', 'MicroCenter', 'Best Buy')
+
+// // console.log(businessNames)
+
+// // const something = 'something'
+
+// // console.log(something)
+
+// // function add(num1, num2) {
+// //   return num1 + num2
+// // }
+
+// // const result = add(10, 15)
+
+// // console.log(result)
+
+// function someFunc() {
+//   console.log('some function')
 // }
+
+// // someFunc()
+
+// const myFunc = function (first, second) {
+//   console.log(second)
+// }
+
+// // myFunc('one', 'two')
+
+// // (function () { console.log('called') })()
+
+// // SCOPE
+// function printName(studentName) {
+//   const capitalize = function (name) {
+//     return name[0].toUpperCase() + name.slice(1)
+//   }
+
+//   return capitalize(studentName)
+// }
+
+// capitalize()
+
+// // const capName = printName('muhsin')
+
+// // console.log(capName)
+
+// // const str = 'asdflkajsdfl'
+// // console.log(str.toUpperCase())
+
+// // const str = 'some string'
+
+// // console.log(str.slice(5))
