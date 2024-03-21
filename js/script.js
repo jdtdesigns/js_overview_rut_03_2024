@@ -1,104 +1,43 @@
 
 
-function one() {
-  const sharedVar = 'shared'
-  console.log(sharedVar)
-}
+// const fruits = ['orange', 'apple', 'grape']
+// const str = 'some string'
 
-function two() {
-  console.log(sharedVar)
+// const newStr = str.replace('string', 'changed')
 
-  if (true) {
-    console.log('nested', sharedVar)
+// console.log(newStr)
+
+
+const str = 'some string'
+const num = 10
+const bool = true
+const arr = ['one', 'two']
+
+const data = {
+  firstName: 'JD',
+  lastName: 'Tadlock',
+  address: '555 code st',
+  phone: '777-777-7777',
+  age: 44,
+  hobbies: ['pickleball', 'fishing'],
+  printBirthday: function (a, b) {
+
+    return a + b
   }
 }
 
-function three() {
-  console.log(sharedVar)
-}
+const sum = data.printBirthday(5.123412, 10)
 
-
-one()
-three()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // function gatherNames(...names) {
-// //   // const names = [name1, name2, name3, name4]
-// //   console.log('spread names:', names)
-// //   return names
-// // }
-
-// // const studentNames = gatherNames('Trevor', 'William', 'Muhsin', 'Mirsad')
-
-// // console.log(studentNames)
-
-// // const businessNames = gatherNames('Office Depot', 'MicroCenter', 'Best Buy')
-
-// // console.log(businessNames)
-
-// // const something = 'something'
-
-// // console.log(something)
-
-// // function add(num1, num2) {
-// //   return num1 + num2
-// // }
-
-// // const result = add(10, 15)
-
-// // console.log(result)
+console.log(sum)
 
 // function someFunc() {
-//   console.log('some function')
+
 // }
 
-// // someFunc()
+// someFunc()
+// console.log(data.printBirthday)
 
-// const myFunc = function (first, second) {
-//   console.log(second)
-// }
+// const data = ['JD', 'Tadlock', '555 code st', '777-777-7777']
 
-// // myFunc('one', 'two')
+// console.log(data[2])
 
-// // (function () { console.log('called') })()
-
-// // SCOPE
-// function printName(studentName) {
-//   const capitalize = function (name) {
-//     return name[0].toUpperCase() + name.slice(1)
-//   }
-
-//   return capitalize(studentName)
-// }
-
-// capitalize()
-
-// // const capName = printName('muhsin')
-
-// // console.log(capName)
-
-// // const str = 'asdflkajsdfl'
-// // console.log(str.toUpperCase())
-
-// // const str = 'some string'
-
-// // console.log(str.slice(5))
