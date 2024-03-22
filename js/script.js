@@ -1,43 +1,84 @@
+const btn = document.querySelector('button.start-btn')
 
-
-// const fruits = ['orange', 'apple', 'grape']
-// const str = 'some string'
-
-// const newStr = str.replace('string', 'changed')
-
-// console.log(newStr)
-
-
-const str = 'some string'
-const num = 10
-const bool = true
-const arr = ['one', 'two']
-
-const data = {
-  firstName: 'JD',
-  lastName: 'Tadlock',
-  address: '555 code st',
-  phone: '777-777-7777',
-  age: 44,
-  hobbies: ['pickleball', 'fishing'],
-  printBirthday: function (a, b) {
-
-    return a + b
-  }
+function doSomething() {
+  console.log('something')
 }
 
-const sum = data.printBirthday(5.123412, 10)
+btn.addEventListener('click', doSomething)
 
-console.log(sum)
+console.log(doSomething)
+// console.log(document.body.children)
+// console.log(document.body.children[2].children[0].innerText)
+// console.log(document.body.children[0].innerText)
+// console.log(document.body.children[1].innerText)
 
-// function someFunc() {
 
+
+
+// const jd = {
+//   name: 'JD',
+//   age: 44
 // }
 
-// someFunc()
-// console.log(data.printBirthday)
+// const bob = {
+//   name: 'Bob',
+//   age: 99
+// }
 
-// const data = ['JD', 'Tadlock', '555 code st', '777-777-7777']
 
-// console.log(data[2])
 
+
+
+
+
+
+
+
+
+// const jane = {
+//   0: 'zero',
+//   name: 'Jane',
+//   age: 35,
+//   info: {
+//     address: '555 code str'
+//   },
+//   haveBirthday: function () {
+//     this.age++
+//     console.log('Happy Birthday!')
+//   }
+// }
+
+// const prop = prompt('Provide a property')
+
+// console.log(jane[prop])
+
+// // function test() {
+// //   return 'some test'
+// // }
+
+// // const result = test()
+
+// // const firstName = 'jane'
+
+// // const cap = toolset.capitalizeName(firstName)
+
+// // console.log(cap)
+
+// // console.log(jane.age)
+
+// // jane.haveBirthday()
+
+// // console.log(jane.age)
+
+// // console.log(this)
+
+
+// // const name = prompt('Please enter your name')
+// // console.log(str)
+
+// // const str = 'some string'
+// // test()
+
+// // function test() {
+// //   console.log('again')
+// // }
