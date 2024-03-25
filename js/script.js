@@ -1,59 +1,46 @@
-const contentWrap = document.querySelector('.content-wrap')
-const btn = document.querySelector('button.start-btn')
+// const document = {
+//   addEventListener: function (eventType, callback) {
+//     // When eventType occurs call callback
 
-function collectPets() {
-  const animals = []
-  let keepGoing = true
+//     // Event object is an object of information and tools related to the user event/action that just occured
+//     const eventObject = {
+//       mouseX: 423.23424
+//     }
 
-  while (keepGoing) {
-    let animalName
+//     callback(eventObject)
+//   }
+// }
 
-    while (!animalName) {
-      animalName = prompt('Type your animal name')
-    }
 
-    const animalType = prompt('What is the animal\'s type')
 
-    const animalObj = {
-      name: animalName,
-      type: animalType
-    }
+// document.addEventListener('keypress', function (eventObj) {
+//   console.log(eventObj.mouseX)
+// })
 
-    animals.push(animalObj)
+// const data = {
+//   name: 'JD',
+//   age: 44,
+//   printBirthday: function () {
+//     console.log(this.age)
+//   }
+// }
 
-    const wantsToContinue = confirm('Click Ok to add another animal')
+// data.printBirthday()
+someFunc()
 
-    keepGoing = wantsToContinue
-  }
-
-  return animals
+function someFunc() {
+  console.log('works')
 }
 
-function displayAllAnimals(animals) {
-  for (let animal of animals) {
-    // Insert a div for every animal object in animals and insert into the content-wrap div
-    contentWrap.insertAdjacentHTML('beforeend', `
-      <div>
-        <h3>Name: ${animal.name}</h3>
-        <p>Type: ${animal.type}</p>
-      </div>
-    `)
-  }
-}
+someFunc()
 
-function consoleRandomAnimal(animals) {
-  // Use Math.floor and Math.random to get a random object from the animals array and display that animal data in the console
-}
 
-function startProcess() {
-  // Gathers all the animals
-  const animals = collectPets()
 
-  // Display all animals
-  displayAllAnimals(animals)
 
-  // Console out a random animal
-  consoleRandomAnimal(animals)
-}
+// function someFunc(num, callback) {
+//   callback('passed to the callback', 30, ['apple', 'orange'])
+// }
 
-btn.addEventListener('click', startProcess)
+// someFunc(5, function (text, num, arr) {
+//   console.log(arr[0])
+// })
