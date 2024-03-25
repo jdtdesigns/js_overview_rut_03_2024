@@ -1,59 +1,55 @@
-const contentWrap = document.querySelector('.content-wrap')
-const btn = document.querySelector('button.start-btn')
+const btn = document.querySelector('button')
 
-function collectPets() {
-  const animals = []
-  let keepGoing = true
+function toggleMode() {
+  const text = btn.innerText
 
-  while (keepGoing) {
-    let animalName
+  document.body.style.backgroundColor = text === 'Dark' ? 'white' : '#333'
 
-    while (!animalName) {
-      animalName = prompt('Type your animal name')
-    }
-
-    const animalType = prompt('What is the animal\'s type')
-
-    const animalObj = {
-      name: animalName,
-      type: animalType
-    }
-
-    animals.push(animalObj)
-
-    const wantsToContinue = confirm('Click Ok to add another animal')
-
-    keepGoing = wantsToContinue
-  }
-
-  return animals
+  btn.innerText = text === 'Light' ? 'Dark' : 'Light'
 }
 
-function displayAllAnimals(animals) {
-  for (let animal of animals) {
-    // Insert a div for every animal object in animals and insert into the content-wrap div
-    contentWrap.insertAdjacentHTML('beforeend', `
-      <div>
-        <h3>Name: ${animal.name}</h3>
-        <p>Type: ${animal.type}</p>
-      </div>
-    `)
-  }
-}
+btn.addEventListener('click', toggleMode)
 
-function consoleRandomAnimal(animals) {
-  // Use Math.floor and Math.random to get a random object from the animals array and display that animal data in the console
-}
 
-function startProcess() {
-  // Gathers all the animals
-  const animals = collectPets()
+// const link = document.querySelector('a')
+// const form = document.querySelector('form')
+// const outputEl = document.querySelector('#output')
+// const previousSearch = localStorage.getItem('search')
 
-  // Display all animals
-  displayAllAnimals(animals)
+// form.character.value = previousSearch
 
-  // Console out a random animal
-  consoleRandomAnimal(animals)
-}
+// link.addEventListener('click', function (eventObj) {
+//   eventObj.preventDefault()
 
-btn.addEventListener('click', startProcess)
+//   console.log(eventObj.target)
+// })
+
+// form.addEventListener('submit', function (eventObj) {
+//   eventObj.preventDefault()
+
+//   const characterName = form.character.value
+
+//   // window.location = './about.html'
+//   localStorage.setItem('search', characterName)
+//   form.character.value = ''
+
+//   // fetch('https://swapi.dev/api/people?search=' + characterName)
+//   //   .then(function (res) {
+//   //     return res.json()
+//   //   })
+//   //   .then(function (data) {
+//   //     outputEl.innerHTML = ''
+
+//   //     data.results.forEach(function (charObj) {
+//   //       outputEl.insertAdjacentHTML('beforeend', `<p>Character: ${charObj.name}</p>`)
+//   //     })
+//   //   })
+
+
+// })
+
+// const jd = {
+//   name: 'JD',
+//   age: 44,
+//   hobbies: ['pickleball', 'fishing']
+// }
