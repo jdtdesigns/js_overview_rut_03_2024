@@ -1,96 +1,38 @@
-// const listItems = document.querySelectorAll('li')
-// const addBtn = document.querySelector('#add-btn')
-// const listOutput = document.querySelector('#list')
-
-// function handleLinkClick() {
-//   console.log('list item clicked')
-// }
-
-// function addListItem() {
-//   // Target listOutput and insert an li element into it at the bottom
-//   listOutput.insertAdjacentHTML('beforeend', `
-//     <li>Item NUM</li>
-//   `)
-// }
-
-// for (let item of listItems) {
-//   item.addEventListener('click', handleLinkClick)
-// }
-
-// addBtn.addEventListener('click', addListItem)
 
 
 const form = document.querySelector('form')
+const nameInput = document.querySelector('#name-input')
+const nameOutput = document.querySelector('#name-output')
 
+function getNames() {
+  const names = localStorage.getItem('names') || []
 
-// btn.addEventListener('click', function (e) {
-//   e.preventDefault()
-
-//   console.log('test')
-// })
-
-function submit(e) {
-  e.preventDefault()
-  console.log('submit')
-  return false
+  return names
 }
 
-form.addEventListener('submit', submit)
+function addName(eventObj) {
+  eventObj.preventDefault()
 
+  const userName = nameInput.value
+  const names = getNames()
 
+  console.log('names', names)
 
+  nameOutput.innerText = 'Stored Name: ' + userName
 
+  names.push(userName)
 
+  console.log(names)
 
+  localStorage.setItem('names', names)
+}
 
-// const googleLink = document.querySelector('#google-link')
+function outputName() {
+  const nameValue = localStorage.getItem('name')
 
-// googleLink.addEventListener('click', function (eventObj) {
-//   eventObj.preventDefault()
+  nameOutput.innerText = 'Stored Name: ' + nameValue
+}
 
-//   console.log(eventObj)
+outputName()
 
-//   console.log(eventObj.target)
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.addEventListener('keypress', function (eventObj) {
-//   const outputEl = document.querySelector('#target-output')
-
-//   console.log(eventObj)
-//   // Key: s / Key Code: 10
-//   // outputEl.innerText = `Key: ${eventObj.key} / Key Code: ${eventObj.code}`
-// })
-
-
-
-// function test() { 
-//   console.log(arguments)
-// }
-
-// test('asdfomasdfo')
-
-
-
-// function delayCall(delayTime, callbackFunction) {
-//   setTimeout(callbackFunction, delayTime * 1000)
-// }
-
-// delayCall(5, function () {
-//   console.log('time complete')
-// })
+form.addEventListener('submit', addName)
