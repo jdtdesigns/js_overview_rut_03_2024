@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
+/* Reset all links to a basic starting format. Later on we can style certain links differently based on our needs and this will be overwritten */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+button,
+input {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}

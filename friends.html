@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friend List</title>
+  <title>Friend List - View Friends</title>
   
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="column">
-  <!-- What html will we need when the page first loads -->
-
   <header class="row justify-between align-center">
-    <h3>Friend List</h3>
+    <a href="index.html">
+      <h3>Friend List</h3>
+    </a>
 
     <nav>
-      <a href="view.html">View Friends</a>
+      <a href="index.html">Home</a>
       <a href="form.html">Add Friend</a>
     </nav>
   </header>
 
-  <main class="flex-1 column justify-center align-center">
-    <h1>Welcome,</h1>
-    <h2>Add Your Friend Today!</h2>
-    <a class="start-now-btn" href="form.html">Start Now</a>
+  <!-- Add dummy html of any content that will be on the page or inserted to use for styling before writing the JS -->
+
+  <main class="flex-1 column">
+    <h1 class="text-center">Friends</h1>
+
+    <ul class="column">
+      <p>No Friends Have Been Added.</p>
+    </ul>
   </main>
 
   <footer class="row justify-between align-center">
     <p>&copy; Copyright 2024</p>
     <p>Developed By Rutgers Class</p>
   </footer>
-  <script src="js/script.js"></script>
+
+  <script src="js/friends.js"></script>
 </body>
 </html>
