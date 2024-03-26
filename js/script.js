@@ -1,46 +1,96 @@
-// const document = {
-//   addEventListener: function (eventType, callback) {
-//     // When eventType occurs call callback
+// const listItems = document.querySelectorAll('li')
+// const addBtn = document.querySelector('#add-btn')
+// const listOutput = document.querySelector('#list')
 
-//     // Event object is an object of information and tools related to the user event/action that just occured
-//     const eventObject = {
-//       mouseX: 423.23424
-//     }
-
-//     callback(eventObject)
-//   }
+// function handleLinkClick() {
+//   console.log('list item clicked')
 // }
+
+// function addListItem() {
+//   // Target listOutput and insert an li element into it at the bottom
+//   listOutput.insertAdjacentHTML('beforeend', `
+//     <li>Item NUM</li>
+//   `)
+// }
+
+// for (let item of listItems) {
+//   item.addEventListener('click', handleLinkClick)
+// }
+
+// addBtn.addEventListener('click', addListItem)
+
+
+const form = document.querySelector('form')
+
+
+// btn.addEventListener('click', function (e) {
+//   e.preventDefault()
+
+//   console.log('test')
+// })
+
+function submit(e) {
+  e.preventDefault()
+  console.log('submit')
+  return false
+}
+
+form.addEventListener('submit', submit)
+
+
+
+
+
+
+
+// const googleLink = document.querySelector('#google-link')
+
+// googleLink.addEventListener('click', function (eventObj) {
+//   eventObj.preventDefault()
+
+//   console.log(eventObj)
+
+//   console.log(eventObj.target)
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 // document.addEventListener('keypress', function (eventObj) {
-//   console.log(eventObj.mouseX)
+//   const outputEl = document.querySelector('#target-output')
+
+//   console.log(eventObj)
+//   // Key: s / Key Code: 10
+//   // outputEl.innerText = `Key: ${eventObj.key} / Key Code: ${eventObj.code}`
 // })
 
-// const data = {
-//   name: 'JD',
-//   age: 44,
-//   printBirthday: function () {
-//     console.log(this.age)
-//   }
+
+
+// function test() { 
+//   console.log(arguments)
 // }
 
-// data.printBirthday()
-someFunc()
-
-function someFunc() {
-  console.log('works')
-}
-
-someFunc()
+// test('asdfomasdfo')
 
 
 
-
-// function someFunc(num, callback) {
-//   callback('passed to the callback', 30, ['apple', 'orange'])
+// function delayCall(delayTime, callbackFunction) {
+//   setTimeout(callbackFunction, delayTime * 1000)
 // }
 
-// someFunc(5, function (text, num, arr) {
-//   console.log(arr[0])
+// delayCall(5, function () {
+//   console.log('time complete')
 // })
