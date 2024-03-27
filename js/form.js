@@ -36,3 +36,7 @@ function init() {
 }
 
 init()
+
+const raw = localStorage.getItem('friends')
+const parsed = JSON.parse((raw && [raw]) || [])
+console.log(parsed)
