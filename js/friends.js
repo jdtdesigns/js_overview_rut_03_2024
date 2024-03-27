@@ -3,32 +3,21 @@ const friendsOutput = document.querySelector('ul')
 
 // Grab the names data from localstorage(make sure to parse)
 const raw = localStorage.getItem('friends')
-let friends = JSON.parse(raw) || []
+const friends = JSON.parse(raw) || []
 
 // Receive the delete button element
 function removeFriend(btnObj) {
-  // Get the parent element of the button
-  const parent = btnObj.parentElement
-  // Get the txt of the button (used to retreive the name)
-  const para = parent.querySelector('p')
+  // Pull the index(data-index) value from the button that was clicked
+  const index = btnObj.dataset.index
 
-  const name = para.innerText
-
-  // Use the array.filter method to filter the friends array out and remove the name matching the button text
-  const filtered = friends.filter(function (friend) {
-    if (friend !== name) {
-      return true
-    }
-  })
-
-  // Replace the old friends array with the new filtered array
-  friends = filtered
+  // Remove the name from the friends array by index number (index = index of the name in the array, 1 - The amount of names you want to remove)
+  friends.splice(index, 1)
 
   // Overwrite the old names data in localstorage(stringify)
   localStorage.setItem('friends', JSON.stringify(friends))
 
   // Remove the button's parent <li> from the DOM
-  parent.remove()
+  btnObj.parentElement.remove()
 
   // If friends is empty, add the paragraph to our ul that says 'No friends have been added'
   if (!friends.length) {
@@ -43,15 +32,15 @@ function outputFriends() {
     friendsOutput.innerHTML = ''
   }
 
-  for (let friend of friends) {
+  friends.forEach(function (friendName, index) {
     // Insert HTML into the friendsOutput UL at the inside end(beforeend)
     friendsOutput.insertAdjacentHTML('beforeend', `
       <li class="row align-center">
-        <p>${friend}</p>
-        <button class="delete-btn">Delete</button>
+        <p>${friendName}</p>
+        <button data-friend="${friendName}" data-index="${index}" class="delete-btn">Delete</button>
       </li>
     `)
-  }
+  })
 }
 
 outputFriends()
