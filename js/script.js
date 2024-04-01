@@ -1,3 +1,47 @@
+// Target the two divs with jQuery
+
+// Create a function that gets todos from localStorage
+
+// Create a function that outputs a paragraph for each todo in localStorage into main when the page loads
+
+/**
+* Use the draggable listener on the main div paragraphs when they are dragged 
+- Your draggable helper callback is going to return a clone of the paragraph
+*/
+
+
+/**
+* Listen with droppable on both main and other when a paragraph is dropped
+
+- Grab the parent div that you are dropping the paragraph into
+  - Checking the dropObject.target
+- Grab that's being dragged (ui.draggable[0])
+- Append the paragraph to the div that you are dropping into
+- 
+*/
+
+// STEP 2 FOR LOCALSTORAGE
+/**
+* Store to localStorage an array of todo objects
+- Each object is going to have 2 properties (text, status)
+  - status property either equal to 'main' or 'other'
+
+* When the page loads, call your output as above and output a paragraph for each object in the todos object array
+  - Set a data-index attribute on each paragraph of the index value of that object in the array
+  - If the status of the todo object is 'main', then output the paragraph into the main div, otherwise into other div
+
+* When a paragraph is dropped, you do the standard steps above to drop it into the new div, but also update the localStorage object status property with the new value, based on the div you drop it in (getting the div parent class)
+  - Grab all the todos
+  - Update the todo object in the todos array based on the data-index that was stored to the paragraph that you're dropping
+  - todos[paragraphDataIndex].status = (conditional statement determining setting either 'main' or 'other')
+  - Overwrite the old array with the new
+*/
+
+
+
+
+
+
 const contentSection = $('.main-content-section')
 
 function getArticles() {
