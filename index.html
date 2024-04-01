@@ -11,22 +11,19 @@
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
     integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 </head>
 <body>
   
-  
-  <form>
-    <input id="todo-input" type="text" placeholder="Enter a todo task">
-    <button>Add Todo</button>
-  </form>
-  
-  <h1>ToDo</h1>
-  <section class="to-do"></section>
+  <section>
+    <h1>Current Weather</h1>
 
-  <h1>Done</h1>
-  <section class="done"></section>
+    <h3 id="current-temp">Temp: 73 &deg;</h3>
+    <p id="wind-speed">Wind Speed: 11 mph</p>
+  </section>
 
-  <div class="random"></div>
+  <h1>Forecast Weather</h1>
+  <section id="forecast-section"></section>
   
   <script src="js/script.js"></script>
 </body>

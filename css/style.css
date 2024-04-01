@@ -37,8 +37,7 @@ form {
 
 
 p {
-  background: #555;
-  color: #fff;
+  /* background: #555; */
   padding: 10px;
   min-width: 80%;
 }
@@ -52,4 +51,10 @@ p {
   background: #fee3ac;
   min-height: 300px;
   margin-top: 50px;
+}
+
+section#forecast-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
