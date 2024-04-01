@@ -4,6 +4,7 @@
 
 html, body {
   height: 100%;
+  padding: 5%;
 }
 
 .carousel-item {
@@ -26,6 +27,29 @@ section article .work-item {
   height: 400px;
 }
 
+form {
+  margin-bottom: 35px;
+}
+
 .drop {
   opacity: 0.25;
+}
+
+
+p {
+  background: #555;
+  color: #fff;
+  padding: 10px;
+  min-width: 80%;
+}
+
+.done, .to-do {
+  background: #bbb;
+  min-height: 200px;
+}
+
+.random {
+  background: #fee3ac;
+  min-height: 300px;
+  margin-top: 50px;
 }
